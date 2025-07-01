@@ -1,0 +1,41 @@
+.login-card {
+  max-width: 380px;
+  min-height: 358px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 39px 30px 32px 30px;
+  flex: 1;
+  &__header {
+    margin: 0;
+    font-weight: bold;
+    font-size: var(--text-h1-font-size);
+    line-height: var(--text-h1-line-height);
+    color: var(--dark-shade-100);
+  }
+  &__login {
+    margin-top: 16px;
+  }
+  &__password {
+    margin-top: 5px;
+  }
+  &__login-button {
+    margin-top: 20px;
+  }
+  &__registration {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__registration-text {
+    font-size: var(--text-body-font-size);
+    line-height: var(--text-body-line-height);
+    color: #000000;
+  }
+  &__registration-button {
+    width: 99px;
+    height: 44px;
+  }
+}

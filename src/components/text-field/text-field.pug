@@ -1,0 +1,19 @@
+mixin text-field({label: label, description: description, placeholder: placeholder, text: text, mask: mask, arrow: arrow})
+    .text-field
+        .text-field__header= label
+        .text-field__description= description
+        if(arrow)
+            .text-field__input.text-field__input_with-arrow.js-text-field__input_with-arrow
+                .text-field__arrow.js-text-field
+                    .text-field__arrow-line
+                    .text-field__arrow-line
+                if(mask)
+                    input.text-field__input-tag.text-field__input-date.js-text-field__input-date(name= id placeholder="ДД.ММ.ГГГГ" value=text)
+                else
+                    input.text-field__input-tag(name= id, placeholder=placeholder, value=text)
+        else
+            .text-field__input
+                if(mask)
+                    input.text-field__input-tag.text-field__input-date.js-text-field__input-date(name= id placeholder="ДД.ММ.ГГГГ" value=text)
+                else
+                    input.text-field__input-tag(name= id, placeholder=placeholder, value=text)

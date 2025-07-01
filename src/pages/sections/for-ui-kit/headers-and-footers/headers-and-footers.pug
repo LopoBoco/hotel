@@ -1,0 +1,17 @@
+include ../../../../components/kit-section-name/kit-section-name.pug
+include ../../../../components/header/header.pug
+include ../../../../components/footer/footer.pug
+.top-title Headers & Footers
+section.headers-and-footers
+    .headers-and-footers__title
+        +kit-section-name({title: "", logo: "logo-dark-grey.svg"})
+    .headers-and-footers__header
+        .headers-and-footers__header_type_for-guest
+            +header({login: false, activeLink: 1})
+        .headers-and-footers__header_type_for-user
+            +header({login: true, activeLink: 1, name: "Юлий Цезарь"})
+    .headers-and-footers__footer
+        .headers-and-footers__footer_type_for-desktop
+            +footer({mobile: false})
+        .headers-and-footers__footer_type_for-mobile
+            +footer({mobile: true})

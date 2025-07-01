@@ -1,0 +1,13 @@
+include ../date-dropdown/date-dropdown
+include ../dropdown/dropdown.pug
+include ../button/button.pug
+
+mixin selection-card({header: header, dateDropdownId: id})
+    form.selection-card
+        .selection-card__header= header
+        .selection-card__calendar
+            +date-dropdown({id: id, type: "split", label: "прибытие", labelTo: "выезд"})
+        .selection-card__guest-dropdown
+            +dropdown({id: "dropdown_selection_1", type: "guests", label: "гости"})
+        .selection-card__button
+            +button({label: "подобрать номер", type: "wide"})

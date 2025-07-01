@@ -1,0 +1,39 @@
+.room-details-list {
+  &__item {
+    margin-top: 21px;
+    display: flex;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  &__img {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__text {
+    padding-left: 10px;
+  }
+  &__text-header {
+    font-weight: bold;
+    font-size: var(--text-body-font-size);
+    line-height: var(--text-body-line-height);
+    color: var(--dark-shade-75);
+  }
+  &__text-description {
+    font-size: var(--text-body-font-size);
+    line-height: var(--text-body-line-height);
+    color: var(--dark-shade-75);
+  }
+  &__line {
+    margin-top: 19px;
+    width: 96%;
+    height: 1px;
+    background-color: var(--dark-shade-10);
+    &:last-child {
+      display: none;
+    }
+  }
+}

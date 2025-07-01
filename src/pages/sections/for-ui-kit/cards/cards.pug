@@ -1,0 +1,30 @@
+include ../../../../components/kit-section-name/kit-section-name.pug
+include ../../../../components/booking-room-card/booking-room-card.pug
+include ../../../../components/date-dropdown/date-dropdown.pug
+include ../../../../components/login-card/login-card.pug
+include ../../../../components/registration-card/registration-card.pug
+include ../../../../components/room-card/room-card.pug
+include ../../../../components/selection-card/selection-card.pug
+.top-title Cards
+section.cards
+    .cards__header
+        +kit-section-name({title: "", logo: "logo-dark-grey.svg"})
+    .cards__container
+        .cards__wrapper
+            .cards__first-column
+                .cards__selection-card
+                    +selection-card({header: "Найдём номера под ваши пожелания", dateDropdownId: "split_date_2"})
+                .cards__registration-card
+                    +registration-card({header: "Регистрация аккаунта", buttonText: "перейти к оплате"})
+            .cards__second-column
+                .cards__booking-room-card
+                    +booking-room-card({roomNumber: "888", roomClass: "люкс", price: "9 990₽"})
+                .cards__login-card
+                    +login-card({header: "Войти"})
+            .cards__third-column
+                .cards__calendar
+                    +date-dropdown({id: "filter_date_2", type: "filter", label: ""})
+                .cards__room-card
+                    +room-card({roomNumber: "888", roomClass: "люкс", price: "9 990₽", reviewsCount: "145", rate: "5", photos: ["888-1.jpg", "888-2.jpg", "888-3.jpg", "888-4.jpg"]})
+                .cards__room-card
+                    +room-card({roomNumber: "840", price: "9 990₽", reviewsCount: "65", rate: "4", photos: ["840.jpg", "856.jpg", "740.jpg", "982.jpg"]})

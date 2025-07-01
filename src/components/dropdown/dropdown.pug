@@ -1,0 +1,43 @@
+include ../button/button.pug
+mixin dropdown({type: type, label: label, description: description, id: id})
+    if (type == "guests")
+        .dropdown.js-dropdown.dropdown_guests.js-dropdown_guests
+            .dropdown__header= label
+            .dropdown__description= description
+            .dropdown__wrapper.js-dropdown__wrapper
+                .dropdown__input.js-dropdown__input
+                    .dropdown__arrow.js-dropdown__arrow
+                        .dropdown__arrow-line
+                    input.dropdown__input-tag(placeholder=placeholder value=text readonly)
+                .dropdown__list.js-dropdown__list
+                    each title in ["взрослые", "дети", "младенцы"]
+                        .dropdown__item
+                            .dropdown__item-title= title
+                            .dropdown__item-counter
+                                .dropdown__item-minus.js-dropdown__item-minus
+                                .dropdown__item-count.js-dropdown__item-count 0
+                                .dropdown__item-plus.js-dropdown__item-plus
+
+                    .dropdown__buttons
+                        .dropdown__buttons-reset.js-dropdown__buttons-reset
+                            +button({type: "icon"})
+                        .dropdown__buttons-apply.js-dropdown__buttons-apply
+                            +button({label: "Применить", type: "icon"})
+
+    else if (type == "room")
+        .dropdown.js-dropdown.dropdown_room.js-dropdown_room
+            .dropdown__header= label
+            .dropdown__description= description
+            .dropdown__wrapper.js-dropdown__wrapper
+                .dropdown__input.js-dropdown__input
+                    .dropdown__arrow.js-dropdown__arrow
+                        .dropdown__arrow-line
+                    input.dropdown__input-tag(placeholder=placeholder value=text readonly)
+                .dropdown__list.js-dropdown__list
+                  each title in ["спальни", "кровати", "ванные комнаты"]
+                      .dropdown__item
+                          .dropdown__item-title= title
+                          .dropdown__item-counter
+                              .dropdown__item-minus.js-dropdown__item-minus
+                              .dropdown__item-count.js-dropdown__item-count 0
+                              .dropdown__item-plus.js-dropdown__item-plus

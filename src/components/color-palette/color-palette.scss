@@ -1,0 +1,19 @@
+.color-palette {
+  display: flex;
+  align-items: center;
+  &__color-block {
+    width: 70px;
+    height: 70px;
+    border-radius: 6px;
+  }
+  &__side {
+    margin-left: 40px;
+  }
+  &__header {
+    font-size: 19px;
+    font-weight: bold;
+  }
+  &__description {
+    font-size: 19px;
+  }
+}

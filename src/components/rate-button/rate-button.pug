@@ -1,0 +1,9 @@
+mixin rate-button({id: id, rate: rate})
+    .rate-button
+      - for (var i = 0; i < 5; i++)
+      if (i < rate)
+          .rate-button__star.js-rate-button__star.rate-button__star_active
+              include ./icons/star.svg
+      else
+          .rate-button__star.js-rate-button__star
+              include ./icons/star_border.svg

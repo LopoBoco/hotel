@@ -1,0 +1,19 @@
+{
+  "links": [
+    {
+      "name": "twitter",
+      "fileName": "twitter.svg",
+      "href": "https://twitter.com"
+    },
+    {
+      "name": "facebook",
+      "fileName": "facebook.svg",
+      "href": "https://facebook.com"
+    },
+    {
+      "name": "instagram",
+      "fileName": "instagram.svg",
+      "href": "https://instagram.com"
+    }
+  ]
+}

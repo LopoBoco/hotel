@@ -1,0 +1,42 @@
+include ../rate-button/rate-button.pug
+
+mixin room-card({roomNumber: roomNumber, roomClass: roomClass, price: price, reviewsCount: reviewsCount, rate: rate, photos: photos})
+    .room-card.js-room-card
+        .room-card__photos
+            .room-card__photos-previous.js-room-card__photos-previous
+            .room-card__photos-next.js-room-card__photos-next
+            - var dotsWidth = 11 * photos.length
+            .room-card__photos-dots(style="width:" + dotsWidth + "px")
+                - for (var x = 0; x < photos.length; x++)
+                    if (x == 0)
+                        .room-card__photos-dot.js-room-card__photos-dot.room-card__photos-dot_active
+                    else
+                        .room-card__photos-dot.js-room-card__photos-dot
+            .room-card__carousel.js-room-card__carousel
+                each roomPhoto in photos
+                    .room-card__carousel-img
+                        img.room-card__carousel-img-tag(src=require('src/components/room-card/img/rooms/' + roomNumber + '/' + roomPhoto))
+
+        .room-card__wrapper= header
+            .room-card__room
+                .room-card__room-number-wrapper №
+                    span.room-card__room-number= roomNumber
+                    span.room-card__room-class= roomClass
+                .room-card__room-price-wrapper
+                    span.room-card__room-price= price
+                    span.room-card__room-price-range  в сутки
+            .room-card__line
+            .room-card__rate
+                .room-card__rate-stars
+                    +rate-button({rate: rate})
+                .room-card__rate-reviews
+                    if (reviewsCount == 0)
+                        |  Нет отзывов
+                    else if (reviewsCount > 0)
+                        span.room-card__rate-reviews-count= reviewsCount
+                        if (reviewsCount == 1 || (reviewsCount > 20 && reviewsCount%10 == 1))
+                            |  Отзыв
+                        else if ((reviewsCount >= 2 && reviewsCount <= 4) || (reviewsCount > 20 && (reviewsCount%10 >= 2 && reviewsCount%10 <= 4)))
+                            |  Отзыва
+                        else if (reviewsCount > 4)
+                            |  Отзывов

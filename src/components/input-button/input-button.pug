@@ -1,0 +1,19 @@
+mixin input-button({type: type, label: label, labelHeader: labelHeader, id: id, value: value, name: name})
+    if (type == "checkbox")
+        .input-button
+            input.input-button__input.input-button__input_type_checkbox(id= id name= name type="checkbox")
+            .input-button__label-wrapper
+                if labelHeader
+                    label.input-button__label-header(for=id)= labelHeader
+                    br
+                    label.input-button__label-subheader(for=id)= label
+                else
+                    label.input-button__label.input-button__label_opacity_50(for=id)= label
+    else if (type == "radio")
+        .input-button
+            input.input-button__input.input-button__input_type_radio(id= id name= name type="radio" value=value)
+            label.input-button__label.input-button__label_opacity_50(for=id)= label
+    else if (type == "switch")
+        .input-button.input-button_wide
+            input.input-button__input.input-button__input_type_switch(id= id name= name type="checkbox")
+            label.input-button__label(for=id)= label

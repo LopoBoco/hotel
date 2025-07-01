@@ -1,0 +1,40 @@
+.top-title {
+  margin-bottom: 15px;
+  font-size: 30px;
+  font-family: Arial, serif;
+  opacity: 0.4;
+  &:hover, &:focus {
+    color: dodgerblue;
+    opacity: unset;
+    cursor: pointer;
+  }
+}
+
+.headers-and-footers {
+  padding-top: 30px;
+  min-height: 1350px;
+  max-width: 1440px;
+  background: #F4F4F6;
+  &:hover, &:focus {
+    border: 6px solid dodgerblue;
+  }
+  &__title {
+    margin-left: 60px;
+  }
+  &__header {
+    display: grid;
+    justify-content: space-around;
+    //padding: 0 140px;
+    flex-wrap: wrap;
+    margin-top: 62px;
+    &_type_for-user {
+      margin-top: 40px;
+    }
+  }
+  &__footer {
+    margin-top: 40px;
+    &_type_for-mobile {
+      margin-top: 40px;
+    }
+  }
+}

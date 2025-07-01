@@ -1,0 +1,35 @@
+@mixin font-init {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+@mixin container-init {
+  max-width: 1160px;
+  margin: 0 auto;
+
+  @media (max-width: 1160px) {
+    max-width: 100%;
+    padding: 0 30px;
+    margin: 0 auto;
+  }
+  @media (max-width: 485px) {
+    max-width: 100%;
+    padding: 0 10px;
+    margin: 0 auto;
+  }
+}
+
+@mixin page-init {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    @include font-init;
+  }
+
+  body {
+    margin: 0;
+  }
+}

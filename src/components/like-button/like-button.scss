@@ -1,0 +1,43 @@
+@import 'src/assets/styles/variables';
+
+.like-button {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  width: 40px;
+  height: 20px;
+  background: #fff;
+  border: 1px solid var(--dark-shade-25);
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+  color: var(--dark-shade-75);
+  font-size: var(--text-body-font-size);
+  line-height: var(--text-body-line-height);
+
+  &__count {
+    width: 20px;
+    padding-right: 5px;
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  & > span {
+    width: 20px;
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  &_liked {
+    border: 1px solid var(--purple-color);
+
+    & > span {
+      color: var(--purple-color);
+    }
+  }
+
+  &:focus-visible {
+    box-shadow: 0 0 0 1px var(--purple-color);
+  }
+
+}

@@ -1,0 +1,10 @@
+mixin like-button(options = {})
+    - const { count, liked = false } = options
+    if (liked)
+        button(type="button").like-button.js-like-button.like-button_liked
+            span.material-icons.like-button__icon.js-like-button__icon favorite
+            span.like-button__count.js-like-button__count= count
+    else
+        button(type="button").like-button.js-like-button
+            span.like-button__icon.material-icons.js-like-button__icon favorite_border
+            span.like-button__count.js-like-button__count= count

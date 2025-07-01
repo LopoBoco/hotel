@@ -1,0 +1,59 @@
+@import '/src/assets/styles/mixins';
+.top-title {
+  margin-bottom: 15px;
+  font-size: 30px;
+  font-family: Arial, serif;
+  opacity: 0.4;
+  &:hover, &:focus {
+    color: dodgerblue;
+    opacity: unset;
+    cursor: pointer;
+  }
+}
+
+.cards {
+  min-height: 1350px;
+  padding: 30px 140px 140px;
+  background: #F4F4F6;
+  &:hover, &:focus {
+    border: 6px solid dodgerblue;
+  }
+  &__header {
+    margin-left: -80px;
+  }
+  &__container {
+    @include container-init;
+  }
+  &__wrapper {
+    margin-top: 72px;
+    min-width: 1159px;
+    display: grid;
+    grid-template-columns: 380px 380px 320px;
+    column-gap: 40px;
+  }
+  &__registration-card {
+    margin-top: 40px;
+  }
+  &__login-card {
+    margin-top: 40px;
+  }
+  &__calendar {
+    width: 320px;
+    .date-dropdown {
+      &__input {
+        display: none;
+      }
+      &__list {
+        display: block;
+        margin-top: 0;
+        top: 0;
+      }
+    }
+  }
+  &__room-card {
+    margin-top: 405px;
+    &:nth-child(3) {
+      margin-top: 40px;
+    }
+  }
+}

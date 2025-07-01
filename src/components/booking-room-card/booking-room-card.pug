@@ -1,0 +1,39 @@
+include ../date-dropdown/date-dropdown
+include ../dropdown/dropdown.pug
+include ../button/button.pug
+
+mixin booking-room-card({roomNumber: roomNumber, roomClass: roomClass, price: price})
+    form.booking-room-card
+        .booking-room-card__header
+            .booking-room-card__room-number-wrapper
+                span.booking-room-card__room-number-symbol №
+                span.booking-room-card__room-number= roomNumber
+                span.booking-room-card__room-class= roomClass
+            .booking-room-card__room-price-wrapper
+                span.booking-room-card__room-price= price
+                span.booking-room-card__room-price-range  в сутки
+
+        .booking-room-card__calendar
+            +date-dropdown({id: "split_date_3", type: "split", label: "прибытие", labelTo: "выезд"})
+
+        .booking-room-card__guests
+            +dropdown({id: "booking-room_guests", type: "guests", label: "гости"})
+
+        .booking-room-card__calculation
+            .booking-room-card__item
+                .booking-room-card__item-description.js-booking-room-card__item-description 9&nbsp;990₽ х 4 суток
+                .booking-room-card__item-price.js-booking-room-card__item-price 39&nbsp;960₽
+            .booking-room-card__item
+                .booking-room-card__item-description.js-booking-room-card__item-description.booking-room-card__item-description_with-info Сбор за услуги: скидка 2&nbsp;179₽
+                .booking-room-card__item-price.js-booking-room-card__item-price 0₽
+            .booking-room-card__item
+                .booking-room-card__item-description.js-booking-room-card__item-description.booking-room-card__item-description_with-info Сбор за дополнительные услуги
+                .booking-room-card__item-price.js-booking-room-card__item-price 300₽
+
+        .booking-room-card__sum
+            .booking-room-card__sum-text.js-booking-room-card__sum-text Итого
+            .booking-room-card__sum-line.js-booking-room-card__sum-line
+            .booking-room-card__sum-number.js-booking-room-card__sum-number
+
+        .booking-room-card__button
+            +button({label: "забронировать", type: "wide"})

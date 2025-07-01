@@ -1,0 +1,30 @@
+:root {
+  --dark-shade-100: #1F2041;
+  --dark-shade-75: rgba(31, 32, 65, 0.75);
+  --dark-shade-50: rgba(31, 32, 65, 0.5);
+  --dark-shade-25: rgba(31, 32, 65, 0.25);
+  --dark-shade-5: rgba(31, 32, 65, 0.05);
+  --purple-color: rgba(188, 156, 255, 1);
+  --green-color: rgba(111, 207, 151, 1);
+  --blue-color: #8BA4F9;
+  --aqua-color: #66D2EA;
+  --yellow-color: #FFE39C;
+  --orange-color: #FFBA9C;
+  --grey-color: #919191;
+  --dark-blue-color: #3D4975;
+  --gradient-purple-color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  --gradient-purple-color-opacity: linear-gradient(180deg, rgba(188,156,255,0.5) 0%, rgba(139,164,249,0.5) 100%);
+  --gradient-green-color: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+
+  --text-h1-font-size: 24px;
+  --text-h1-line-height: 100%;
+
+  --text-h2-font-size: 19px;
+  --text-h2-line-height: 100%;
+
+  --text-h3-font-size: 12px;
+  --text-h3-line-height: 100%;
+
+  --text-body-font-size: 14px;
+  --text-body-line-height: 24px;
+}

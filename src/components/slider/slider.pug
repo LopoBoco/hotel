@@ -1,0 +1,5 @@
+mixin slider({header: header, from: from, to: to, min: min, max: max, step: step})
+    .slider(data-slider-values=`{"min": ${min}, "max": ${max}, "step": ${step}, "from": ${from}, "to": ${to}}`)
+        .slider__header= header
+        .slider__result 5 000₽ - 10 000₽
+        .slider__plugin.js-slider__plugin

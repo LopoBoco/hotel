@@ -1,0 +1,49 @@
+include ../button/button.pug
+
+mixin header({login: login, name: name, activeLink: activeLink})
+    header.header
+        .header__container
+            .header__wrapper.js-header__wrapper
+                .header__logo
+                    a(href="landing-page")
+                        img(src=require("src/components/header/icons/main-logo.svg"), alt="logo")
+                nav.header__navigation
+                    ul.header__list
+                        - const data = require('src/components/header/data/links.json')
+                        each link, linkIndex in data.links
+                            li.header__list-item-wrapper
+                                .header__list-item
+                                    if activeLink === linkIndex + 1 && link.href
+                                        a.header__list-link.header__list-link_active(href=link.href)= link.label
+                                    else if activeLink === linkIndex + 1 && !link.href
+                                        .header__list-link.header__list-link_active= link.label
+                                    else if activeLink !== linkIndex + 1 && link.href
+                                        a.header__list-link(href=link.href)= link.label
+                                    else if activeLink !== linkIndex + 1 && !link.href
+                                        .header__list-link= link.label
+
+                                    if link.subLinks
+                                        .header__list-arrow.js-header__list-arrow
+
+                                if link.subLinks
+                                    ul.header__dropdown
+                                    each dropdownLink in link.subLinks
+                                        li.header__dropdown-item
+                                            a.header__dropdown-link(href=dropdownLink.href)= dropdownLink.label
+                        if (login === true)
+                            li
+                                .header__user
+                                    .header__line
+                                    a.header__name.header__list-link(href="unset")= name
+                if (login == false)
+                    .header__buttons
+                        .header__buttons-login.header__buttons-login-set-size
+
+                            +button({label: "войти", type: "invert", link: "login"})
+                        .header__buttons-register.header__buttons-register-set-size
+
+                            +button({label: "зарегистрироваться", type: "filed", link: "registration"})
+
+            .header__hamburger.js-header__hamburger
+              - for (var x = 0; x < 3; x++)
+                span.header__hamburger-line

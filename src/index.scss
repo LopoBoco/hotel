@@ -1,0 +1,17 @@
+@import './assets/styles/montserrat.scss';
+@import './assets/styles/mixins.scss';
+@include page-init;
+body{
+  background: var(--gradient-purple-color)
+}
+.preview-pages {
+  max-width: 1000px;
+  height: 100vh;
+  margin-left: 35%;
+  padding: 20px;
+  line-height: 22px;
+}
+
+a {
+  color: var(--gradient-purple-color);
+}

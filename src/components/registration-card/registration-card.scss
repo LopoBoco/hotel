@@ -1,0 +1,61 @@
+.registration-card {
+  max-width: 382px;
+  min-height: 646px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 39px 30px 30px 30px;
+  flex: 1;
+  &__header {
+    margin: 0;
+    font-weight: bold;
+    font-size: var(--text-h1-font-size);
+    line-height: var(--text-h1-line-height);
+    color: var(--dark-shade-100);
+  }
+  &__person {
+    margin-top: 15px;
+  }
+  &__person-surname {
+    margin-top: 5px;
+  }
+  &__person-gender {
+    width: 220px;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 20px;
+  }
+  &__person-birthday {
+    margin-top: 25px;
+  }
+  &__login {
+    margin-top: 21px;
+  }
+  &__login-password {
+    margin-top: 5px;
+  }
+  &__special {
+    margin-top: 8px;
+  }
+  &__pay-button {
+    margin-top: 25px;
+  }
+  &__account {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__account-text {
+    font-size: var(--text-body-font-size);
+    line-height: var(--text-body-line-height);
+    color: #000000;
+  }
+  &__account-button {
+    width: 99px;
+    height: 44px;
+  }
+}

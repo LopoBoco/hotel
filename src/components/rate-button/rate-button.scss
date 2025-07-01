@@ -1,0 +1,22 @@
+.rate-button {
+  display: grid;
+  grid-template-columns: repeat(5, 20px);
+  column-gap: 4px;
+  &__star {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    svg {
+      cursor: pointer;
+      width: 20px;
+      height: 20px;
+      stroke: url(#purpleGradientStar);
+      stroke-width: 2px;
+    }
+    &_active {
+      svg {
+        fill: url(#purpleGradientStar);
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+extends ./pages/template/template.pug
+
+block content
+    section.preview-pages
+        h1 Toxin Hotel Start Page
+        ul.preview-pages__project-pages
+            - const file = require('/src/project-pages.json')
+            each label, link in file
+              li
+                a(href=link)= label

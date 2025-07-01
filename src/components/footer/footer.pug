@@ -1,0 +1,70 @@
+include ../subscription-text-field/subscription-text-field.pug
+
+mixin footer({mobile: mobile})
+    - var data = require('/src/components/footer/data/social-links.json')
+    footer.footer
+        if (!mobile)
+            .footer__main-outer
+                .footer__container
+                    .footer__main
+                        .footer__about
+                            a(href="landing-page")
+                                .footer__about-logo
+                                    img.footer__about-logo-img(src=require("/src/components/footer/icons/main-logo.svg"), alt="logo")
+                            .footer__about-text Бронирование&nbsp;номеров&nbsp;в&nbsp;лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+
+                        nav.footer__navigation
+                            .footer__navigation-header навигация
+                            ul.footer__navigation-list
+                                each link in ['О нас', 'Новости', 'Служба поддержки', 'Услуги']
+                                    li.footer__navigation-list-item
+                                        a.footer__navigation-link(href="unset")= link
+
+                        nav.footer__navigation
+                            .footer__navigation-header о нас
+                            ul.footer__navigation-list
+                                each link in ['О сервисе', 'Наша команда', 'Вакансии', 'Инвесторы']
+                                    li.footer__navigation-list-item
+                                        a.footer__navigation-link(href="unset")= link
+
+                        nav.footer__navigation
+                            .footer__navigation-header Служба&nbsp;поддержки
+                            ul.footer__navigation-list
+                                each link in ['Соглашения', 'Сообщества', 'Связь с нами']
+                                    li.footer__navigation-list-item
+                                        a.footer__navigation-link(href="unset")= link
+
+                        form.footer__subscribe
+                            .footer__subscribe-header Подписка
+                            .footer__subscribe-text Получайте&nbsp;специальные предложения&nbsp;и&nbsp;новости&nbsp;сервиса
+                            .footer__subscribe-input
+                                +subscription-text-field({})
+            .footer__copyright-outer
+                .footer__container
+                    .footer__copyright
+                        .footer__copyright-text Copyright © 2018 Toxin отель. Все права защищены.
+                        .footer__copyright-icons
+                            each link in data.links
+                                a.footer__copyright-icon(href= link.href)
+                                    img.footer__copyright-icon-img(src=require("/src/components/footer/icons/social/" + link.fileName), alt= link.name)
+
+            .footer__true-mobile
+                .footer__mobile-logo
+                    a(href="landing-page")
+                        img.footer__mobile-logo-img(src=require("/src/components/footer/icons/main-logo.svg"), alt="logo")
+                .footer__true-mobile-text Copyright © 2018 Toxin отель. Все права защищены.
+                .footer__true-mobile-icons
+                    each link in data.links
+                        a.footer__true-mobile-icon(href= link.href)
+                            img.footer__true-mobile-icon-img(src=require("/src/components/footer/icons/social/" + link.fileName), alt= link.name)
+
+        else
+            .footer__mobile
+                .footer__mobile-logo
+                    a(href="landing-page")
+                        img(src=require("/src/components/footer/icons/main-logo.svg"), alt="logo")
+                .footer__mobile-text Copyright © 2018 Toxin отель. Все права защищены.
+                .footer__mobile-icons
+                    each link in data.links
+                        a.footer__mobile-icon(href= link.href)
+                            img.footer__mobile-icon-img(src=require("/src/components/footer/icons/social/" + link.fileName), alt= link.name)

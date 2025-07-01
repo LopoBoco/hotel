@@ -1,0 +1,15 @@
+.rich-checkbox-buttons {
+  &__header {
+    font-weight: bold;
+    font-size: var(--text-h3-font-size);
+    line-height: var(--text-h3-line-height);
+    text-transform: uppercase;
+    color: var(--dark-shade-100);
+  }
+  &__list-item {
+    margin-top: 10px;
+    &:first-child {
+      margin-top: 14px;
+    }
+  }
+}

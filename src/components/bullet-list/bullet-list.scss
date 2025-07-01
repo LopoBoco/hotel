@@ -1,0 +1,35 @@
+.bullet-list {
+  &__header {
+    font-weight: bold;
+    font-size: var(--text-h3-font-size);
+    line-height: var(--text-h3-line-height);
+    text-transform: uppercase;
+    color: var(--dark-shade-100);
+  }
+  &__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    padding-left: 21px;
+  }
+  &__item {
+    position: relative;
+    margin-top: 10px;
+    font-size: var(--text-body-font-size);
+    line-height: var(--text-body-line-height);
+    color: var(--dark-shade-75);
+    &:first-child {
+      margin-top: 12px;
+    }
+    &::before {
+      position: absolute;
+      content: '';
+      width: 10.43px;
+      height: 10px;
+      top: 7px;
+      left: -21px;
+      border-radius: 50%;
+      background-color: var(--dark-shade-25);
+    }
+  }
+}

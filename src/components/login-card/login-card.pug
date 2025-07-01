@@ -1,0 +1,16 @@
+include ../text-field/text-field.pug
+include ../button/button.pug
+
+mixin login-card({header: header})
+    .login-card
+        .login-card__header= header
+        .login-card__login
+            +text-field({id: "email_2", placeholder: "Email"})
+        .login-card__password
+            +text-field({id: "password_2", placeholder: "Пароль"})
+        .login-card__login-button
+            +button({label: "войти", type: "wide"})
+        .login-card__registration
+            .login-card__registration-text Нет аккаунта на Toxin?
+            .login-card__registration-button
+                +button({label: "создать", type: "invert", link: "registration"})

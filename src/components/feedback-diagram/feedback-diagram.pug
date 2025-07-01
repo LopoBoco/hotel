@@ -1,0 +1,47 @@
+mixin feedback-diagram({disappointed: disappointed, acceptable: acceptable, good: good, amazing: amazing})
+    .feedback-diagram(data-feedback=`{"disappointed": ${disappointed}, "acceptable": ${acceptable}, "good": ${good}, "amazing": ${amazing}}`)
+        - var radius = 15.91549430918954
+        - var vcx = 16.5
+        - var vcy = 16.5
+        figure.feedback-diagram__figure
+            .feedback-diagram__figure-content
+                svg(height= "100%" viewBox="0 0 33 33")
+                    linearGradient(id="purpleGradientCircle" gradientTransform="rotate(90)")
+                        stop(offset="0%"  style="stop-color:var(--purple-color)")
+                        stop(offset="100%" style="stop-color:var(--blue-color)")
+                    linearGradient(id="orangeGradientCircle" gradientTransform="rotate(90)")
+                        stop(offset="0%"  style="stop-color:var(--yellow-color)")
+                        stop(offset="100%" style="stop-color:var(--orange-color)")
+                    linearGradient(id="greenGradientCircle" gradientTransform="rotate(90)")
+                        stop(offset="0%"  style="stop-color:var(--green-color)")
+                        stop(offset="100%" style="stop-color:var(--aqua-color)")
+                    linearGradient(id="greyGradientCircle" gradientTransform="rotate(90)")
+                        stop(offset="0%"  style="stop-color:var(--grey-color)")
+                        stop(offset="100%" style="stop-color:var(--dark-blue-color)")
+
+                    circle.js-feedback-diagram__segment-disappointed(cx= vcx cy= vcy r= radius fill="transparent" stroke= "url(#greyGradientCircle)" stroke-width="0")
+
+                    circle.js-feedback-diagram__segment-acceptable(cx= vcx cy= vcy r= radius fill="transparent" stroke= "url(#purpleGradientCircle)" stroke-width="0")
+
+                    circle.js-feedback-diagram__segment-good(cx= vcx cy= vcy r= radius fill="transparent" stroke= "url(#greenGradientCircle)" stroke-width="0")
+
+                    circle.js-feedback-diagram__segment-amazing(cx= vcx cy= vcy r= radius fill="transparent" stroke= "url(#orangeGradientCircle)" stroke-width="0")
+
+                    g.feedback-diagram__text
+                        text.feedback-diagram__text-number.js-feedback-diagram__text-number(x="50%" y="50%")
+                        text.feedback-diagram__text-label.js-feedback-diagram__text-label(x="50%" y="50%")
+
+            figcaption.feedback-diagram__figure-key
+                ul.feedback-diagram__figure-key-list(aria-hidden="true" role="presentation")
+                    li.feedback-diagram__figure-key-list-item
+                        span.feedback-diagram__shape-circle.feedback-diagram__shape-circle_color_orange
+                        | Великолепно
+                    li.feedback-diagram__figure-key-list-item
+                        span.feedback-diagram__shape-circle.feedback-diagram__shape-circle_color_green
+                        | Хорошо
+                    li.feedback-diagram__figure-key-list-item
+                        span.feedback-diagram__shape-circle.feedback-diagram__shape-circle_color_purple
+                        | Удовлетворительно
+                    li.feedback-diagram__figure-key-list-item
+                        span.feedback-diagram__shape-circle.feedback-diagram__shape-circle_color_dark-blue
+                        | Разочарован

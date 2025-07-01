@@ -1,0 +1,96 @@
+.pagination {
+  &__list {
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+  }
+  &__item {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+
+    font-size: var(--text-h3-font-size);
+    line-height: var(--text-h3-line-height);
+    text-transform: uppercase;
+    color: var(--dark-shade-50);
+    &:hover:not(.pagination__item_dots) {
+      background: var(--gradient-purple-color);
+      font-weight: bold !important;
+      color: #FFFFFF !important;
+    }
+    &_active {
+      background: var(--gradient-purple-color);
+      font-weight: bold !important;
+      color: #FFFFFF !important;
+    }
+    &_type_dots {
+      cursor: unset;
+    }
+    &_type_previous {
+      position: relative;
+      background: var(--gradient-green-color);
+      &:before {
+        content: '';
+        position: absolute;
+        height: 2px;
+        width: 14px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #FFFFFF;
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 45%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+        border: solid #FFFFFF;
+        border-width: 2px 0 0 2px;
+        padding: 4px;
+      }
+    }
+    &_type_next {
+      position: relative;
+      background: var(--gradient-green-color);
+      &:before {
+        content: '';
+        position: absolute;
+        height: 2px;
+        width: 14px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #FFFFFF;
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 55%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+        border: solid #FFFFFF;
+        border-width: 0 2px 2px 0;
+        padding: 4px;
+      }
+    }
+
+    @media (max-width: 375px) {
+      width: 32px;
+      height: 32px;
+    }
+  }
+  &__description {
+    font-size: var(--text-body-font-size);
+    line-height: var(--text-body-line-height);
+    color: var(--dark-shade-75);
+    margin-top: 8px;
+    text-align: center;
+  }
+}

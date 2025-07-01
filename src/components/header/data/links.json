@@ -1,0 +1,28 @@
+{
+  "links": [
+    {
+      "href": "unset",
+      "label": "О нас"
+    },
+    {
+      "label": "Услуги",
+      "subLinks": [
+
+      ]
+    },
+    {
+      "href": "unset",
+      "label": "Вакансии"
+    },
+    {
+      "href": "unset",
+      "label": "Новости"
+    },
+    {
+      "label": "Соглашения",
+      "subLinks": [
+
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+mixin room-details-list({items})
+    .room-details-list
+        .room-details-list__list
+            each item, i in items
+                .room-details-list__item
+                    .room-details-list__img
+                        img(src=require('/src/components/room-details-list/icons/' + item[2]))
+                    .room-details-list__text
+                        .room-details-list__text-header= item[0]
+                        .room-details-list__text-description= item[1]
+                .room-details-list__line

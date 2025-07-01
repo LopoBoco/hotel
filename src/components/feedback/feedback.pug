@@ -1,0 +1,11 @@
+include ../input-button/input-button.pug
+mixin feedback({name: name, icon: icon, time: time, text: text, likes: likes})
+    .feedback
+        .feedback__img
+            img.feedback__img-tag(src=require('src/components/feedback/icons/' + icon))
+        .feedback__person
+            .feedback__person-name= name
+            .feedback__person-time= time
+        .feedback__like
+            +like-button({count: 12, liked: true})
+        .feedback__text= text

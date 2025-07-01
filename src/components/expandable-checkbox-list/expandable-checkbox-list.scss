@@ -1,0 +1,50 @@
+.expandable-checkbox-list {
+  position: relative;
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+  &__label {
+    font-weight: bold;
+    font-size: var(--text-h3-font-size);
+    line-height: var(--text-h3-line-height);
+    text-transform: uppercase;
+    color: var(--dark-shade-100);
+  }
+  &__arrow {
+    cursor: pointer;
+    position: relative;
+    width: 44px;
+    height: 44px;
+  }
+  &__arrow-line {
+    position: absolute;
+    top: 44%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    border: solid var(--dark-shade-50);
+    border-width: 0 0 2px 2px;
+    padding: 4px;
+    &_active {
+      top: 56%;
+      border-width: 2px 2px 0 0;
+    }
+  }
+  &__list {
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    display: none;
+    z-index: 1;
+    top: 100%;
+    left: 0;
+    & > div {
+      margin-top: 10px;
+      &:first-child {
+        margin-top: 3px;
+      }
+    }
+  }
+}

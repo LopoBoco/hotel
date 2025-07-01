@@ -1,0 +1,6 @@
+mixin bullet-list({header: header, labels: labels})
+    .bullet-list
+        .bullet-list__headet= header
+    ul.bullet-list__list
+        each val in labels
+          li.bullet-list__item= val

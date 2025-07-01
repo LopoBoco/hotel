@@ -1,0 +1,31 @@
+include ../../../../components/kit-section-name/kit-section-name.pug
+include ../../../../components/color-palette/color-palette.pug
+.top-title Color & Types
+section.color-and-types
+    .color-and-types__header
+        +kit-section-name({title: "", logo: "logo-dark-grey.svg"})
+    .color-and-types__container
+        .color-and-types__wrapper
+            .color-and-types__palette
+                - var colorsListName = ["Dark Shade 100%", "Dark Shade 75%", "Dark Shade 50%", "Dark Shade 25%", "Dark Shade 5%", "Purple", "Green"]
+                - var colorsListDescription = ["#1F2041", "#1F2041", "#1F2041", "#1F2041", "#1F2041", "#BC9CFF", "#6FCF97"]
+                - var colorsListRef = ["#1F2041", "rgba(31, 32, 65, 0.75)", "rgba(31, 32, 65, 0.5)", "rgba(31, 32, 65, 0.25)", "rgba(31, 32, 65, 0.05)", "#BC9CFF", "#6FCF97"]
+                - for (var x = 0; x < 7; x++)
+                    .color-and-types__palette-item
+                        +color-palette(colorsListName[x], colorsListDescription[x], colorsListRef[x])
+
+            .color-and-types__text-types
+                .color-and-types__text-types-header.color-and-types__text-types-header_type_h1 H1
+                .color-and-types__text-types-description_type_h1 This one is the sub-section or
+                    br
+                    |widget title
+                .color-and-types__text-types-header.color-and-types__text-types-header_type_h2 H2
+                .color-and-types__text-types-description_type_h2 Next one is the item title inside
+                    br
+                    |widgets
+                .color-and-types__text-types-header.color-and-types__text-types-header_type_h3 H3
+                .color-and-types__text-types-description_type_h3 This is a label or CTA text
+                .color-and-types__text-types-header.color-and-types__text-types-header_type_body Body
+                .color-and-types__text-types-description.color-and-types__text-types-description_type_body This is the body text which is used for most
+                    br
+                    |of the design, like paragraphs, lists, etc.
