@@ -88,11 +88,11 @@ module.exports = {
     //   template: 'src/pages/landing-page/landing-page.pug',
     //   filename: 'landing-page/index.html',
     // }),
-    // new HTMLWebpackPlugin({
-    //   inject: true,
-    //   template: 'src/pages/registration/registration.pug',
-    //   filename: 'registration/index.html',
-    // }),
+    new HTMLWebpackPlugin({
+      inject: true,
+      template: 'src/pages/registration/registration.pug',
+      filename: 'registration/index.html',
+    }),
     // new HTMLWebpackPlugin({
     //   inject: true,
     //   template: 'src/pages/login/login.pug',

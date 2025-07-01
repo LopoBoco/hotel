@@ -1,0 +1,15 @@
+extends ../template/template.pug
+
+block content
+  include ../../components/header/header.pug
+  include ../../components/registration-card/registration-card.pug
+  include ../../components/footer/footer.pug
+  section.landing-registration-main
+    .landing-registration-main__header 
+      +header({login: false})
+    .landing-registration-main__container
+      .landing-registration-main__register
+        +registration-card({header: "Регистрация аккаунта", buttonText: "зарегистрироваться"})
+
+  section.landing-registration-footer
+    +footer({mobile: false})

@@ -1,0 +1,40 @@
+@import '/src/assets/styles/mixins';
+
+.landing-registration-main {
+  min-height: 753px;
+  background: center center/cover no-repeat;
+  background-image: url(./img/pink-room-preview.jpg);
+  background-image: url(./img/grey-room-preview.jpg);
+  animation: registration-background-images 20s cubic-bezier(0.8,-2.5,0.8,1) infinite;
+
+  display: grid;
+  grid-template-rows: min-content;
+  &__container {
+    @include container-init;
+    width: 100%;
+    flex: 1;
+  }
+  &__register {
+    padding: 12px 0 12px 5px;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  @media (max-width: 991px) {
+    min-height: 100vh;
+  }
+}
+
+@keyframes registration-background-images {
+  0% {
+    background-image: url(./img/grey-room-preview.jpg);
+  }
+  50% {
+    background-image: url(./img/pink-room-preview.jpg);
+  }
+  100% {
+    background-image: url(./img/grey-room-preview.jpg);
+  }
+}
