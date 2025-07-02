@@ -103,11 +103,11 @@ module.exports = {
     //   template: 'src/pages/search-room/search-room.pug',
     //   filename: 'search-room/index.html',
     // }),
-    // new HTMLWebpackPlugin({
-    //   inject: true,
-    //   template: 'src/pages/room-details/room-details.pug',
-    //   filename: 'room-details/index.html',
-    // }),
+    new HTMLWebpackPlugin({
+      inject: true,
+      template: 'src/pages/room-details/room-details.pug',
+      filename: 'room-details/index.html',
+    }),
 
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin({
