@@ -98,11 +98,11 @@ module.exports = {
     //   template: 'src/pages/login/login.pug',
     //   filename: 'login/index.html',
     // }),
-    // new HTMLWebpackPlugin({
-    //   inject: true,
-    //   template: 'src/pages/search-room/search-room.pug',
-    //   filename: 'search-room/index.html',
-    // }),
+    new HTMLWebpackPlugin({
+      inject: true,
+      template: 'src/pages/search-room/search-room.pug',
+      filename: 'search-room/index.html',
+    }),
     new HTMLWebpackPlugin({
       inject: true,
       template: 'src/pages/room-details/room-details.pug',

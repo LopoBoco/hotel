@@ -1,0 +1,139 @@
+@import '/src/assets/styles/mixins';
+
+.search-room {
+  &__container {
+    @include container-init;
+  }
+  &__main {
+    background: #FFFFFF;
+  }
+  &__main-wrapper {
+    padding: 30px 0 72px;
+    display: grid;
+    grid-template-columns: 266px auto;
+    column-gap: 105px;
+  }
+  &__filter {
+    min-width: 310px;
+    min-height: 917px;
+    padding-left: 50px;
+  }
+  &__filter-guests {
+    margin-top: 22px;
+  }
+  &__filter-price {
+    margin-top: 30px;
+  }
+  &__filter-price-text {
+    margin-top: 10px;
+    text-transform: unset;
+    font-size: var(--text-h3-font-size);
+    line-height: var(--text-h3-line-height);
+    color: var(--dark-shade-50);
+  }
+  &__filter-house-rules {
+    margin-top: 28px;
+  }
+  &__filter-house-rules-list {
+    padding: 0;
+    margin: 0;
+  }
+  &__filter-house-rules-list-item {
+    margin-top: 10px;
+    &:nth-child(1) {
+      margin-top: 15px;
+    }
+  }
+  &__filter-house-rules-header {
+    font-weight: bold;
+    font-size: var(--text-h3-font-size);
+    line-height: var(--text-h3-line-height);
+    text-transform: uppercase;
+    color: var(--dark-shade-100);
+  }
+  &__filter-availability {
+    margin-top: 29px;
+  }
+  &__filter-comfort {
+    margin-top: 28px;
+  }
+  &__filter-additional-comfort {
+    margin-top: 15px;
+  }
+  &__filter-symbols {
+    display: none;
+  }
+  &__result {
+    margin-top: -15px;
+  }
+  &__result-header {
+    font-weight: bold;
+    font-size: var(--text-h1-font-size);
+    line-height: var(--text-h1-line-height);
+    color: var(--dark-shade-100);
+  }
+  &__result-wrapper {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 12px;
+    row-gap: 21px;
+    grid-row: auto;
+  }
+  &__result-pagination {
+    margin-top: 42px;
+    margin-right: 15px;
+  }
+  &__bottom-line {
+    width: 100%;
+    height: 1px;
+    background-color: var(--dark-shade-25);
+  }
+
+  @media (max-width: 768px) {
+    &__main-wrapper {
+      grid-template-columns: auto !important;
+    }
+    &__filter {
+      min-height: 990px;
+      display: none;
+      margin-left: auto;
+    }
+    &__filter-symbols {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      font-size: 34px;
+      color: var(--dark-shade-75);
+    }
+    &__filter-price-slider {
+      margin: 0 8px;
+    }
+    &__result {
+      text-align: center;
+    }
+    &__result-filter {
+      transform: translateY(-50%);
+      width: 30px;
+      margin-left: calc(100% - 30px);
+    }
+    &__result-filter-line {
+      display: block;
+      height: 4px;
+      margin: 0 auto;
+      background-color: var(--dark-shade-75);
+      margin-bottom: 4px;
+      transition: 0.5s all;
+      &:nth-child(1) {
+        width: 100%;
+      }
+      &:nth-child(2) {
+        width: 60%;
+      }
+      &:nth-child(3) {
+        width: 20%;
+      }
+    }
+  }
+}

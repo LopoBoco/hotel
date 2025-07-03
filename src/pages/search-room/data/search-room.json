@@ -1,0 +1,90 @@
+{
+  "rooms": [
+    {
+      "roomNumber": "888",
+      "roomClass": "люкс",
+      "price": "9 990₽",
+      "reviewsCount": "145",
+      "rate": "5",
+      "photos": ["888-1.jpg", "888-2.jpg", "888-3.jpg", "888-4.jpg"]
+    }, 
+    {
+      "roomNumber": "840",
+      "price": "9 990₽",
+      "reviewsCount": "65",
+      "rate": "4",
+      "photos": ["840.jpg", "856.jpg", "740.jpg", "982.jpg"]
+    },
+    {
+      "roomNumber": "980",
+      "roomClass": "люкс",
+      "price": "8 500₽",
+      "reviewsCount": "35",
+      "rate": "3",
+      "photos": ["980-1.jpg", "980-2.jpg", "980-3.jpg", "980-4.jpg"]
+    },
+    {
+      "roomNumber": "856",
+      "price": "7 300₽",
+      "reviewsCount": "19",
+      "rate": "5",
+      "photos": ["856-1.jpg", "856-2.jpg", "856-3.jpg", "856-4.jpg"]
+    },
+    {
+      "roomNumber": "740",
+      "price": "6 000₽",
+      "reviewsCount": "44",
+      "rate": "4",
+      "photos": ["740-1.jpg", "740-2.jpg", "740-3.jpg", "740-4.jpg"]
+    },
+    {
+      "roomNumber": "982",
+      "price": "5 800₽",
+      "reviewsCount": "56",
+      "rate": "3",
+      "photos": ["982-1.jpg", "982-2.jpg", "982-3.jpg", "982-4.jpg"]
+    },
+    {
+      "roomNumber": "678",
+      "price": "5 500₽",
+      "reviewsCount": "45",
+      "rate": "5",
+      "photos": ["678-1.jpg", "678-2.jpg", "678-3.jpg", "678-4.jpg"]
+    },
+    {
+      "roomNumber": "450",
+      "price": "5 300₽",
+      "reviewsCount": "39",
+      "rate": "4",
+      "photos": ["450-1.jpg", "450-2.jpg", "450-3.jpg", "450-4.jpg"]
+    },
+    {
+      "roomNumber": "350",
+      "price": "5 000₽",
+      "reviewsCount": "77",
+      "rate": "3",
+      "photos": ["350-1.jpg", "350-2.jpg", "350-3.jpg", "350-4.jpg"]
+    },
+    {
+      "roomNumber": "666",
+      "price": "5 000₽",
+      "reviewsCount": "25",
+      "rate": "5",
+      "photos": ["666-1.jpg", "666-2.jpg", "666-3.jpg", "666-4.jpg"]
+    },
+    {
+      "roomNumber": "444",
+      "price": "5 000₽",
+      "reviewsCount": "15",
+      "rate": "3",
+      "photos": ["444-1.jpg", "444-2.jpg", "444-3.jpg", "444-4.jpg"]
+    },
+    {
+      "roomNumber": "352",
+      "price": "5 000₽",
+      "reviewsCount": "55",
+      "rate": "3",
+      "photos": ["352-1.jpg", "352-2.jpg", "352-3.jpg", "352-4.jpg"]
+    }
+  ]
+}

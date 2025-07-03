@@ -1,0 +1,66 @@
+extends ../template/template.pug
+
+block content
+  include ../../components/header/header.pug
+  include ../../components/footer/footer.pug
+  include ../../components/dropdown/dropdown.pug
+  include ../../components/date-dropdown/date-dropdown.pug
+  include ../../components/slider/slider.pug
+  include ../../components/input-button/input-button.pug
+  include ../../components/rich-checkbox-buttons/rich-checkbox-buttons.pug
+  include ../../components/expandable-checkbox-list/expandable-checkbox-list.pug
+  include ../../components/room-card/room-card.pug
+  include ../../components/pagination/pagination.pug
+
+  section.search-room__header
+    +header({login: false})
+  
+  section.search-room__main
+    .search-room__container
+      .search-room__main-wrapper
+        .search-room__filter.js-search-room__filter
+          .search-room__filter-symbols 
+            .search-room__filter-symbols-reset.js-search-room__filter-symbols-reset &#10006;
+            .search-room__filter-symbols-apply.js-search-room__filter-symbols-apply &#10004;
+          .search-room__filter-date
+            +date-dropdown({id: "filter-date", type: "filter", label: "даты пребывания в отеле"})
+          .search-room__filter-guests
+            +dropdown({id: "filter-guests", type: "guests", label: "гости"})
+          .search-room__filter-price
+            .search-room__filter-price-slider
+              +slider({header: "диапазон цены", min: 1000, max: 15000, step: 100, from: 5000, to: 10000})
+            .search-room__filter-price-text Стоимость за сутки пребывания в номере
+          .search-room__filter-house-rules 
+            .search-room__filter-house-rules-header правила дома
+            ul.search-room__filter-house-rules-list
+              .search-room__filter-house-rules-list-item
+                +input-button({type: "checkbox", id: "filter-smoking", label: "Можно курить"})
+              .search-room__filter-house-rules-list-item
+                +input-button({type: "checkbox", id: "filter-pets", label: "Можно с питомцами"})
+              .search-room__filter-house-rules-list-item
+                +input-button({type: "checkbox", id: "filter-add-guests", label: "Можно пригласить гостей (до 10 человек)"})
+          .search-room__filter-availability
+            +rich-checkbox-buttons({name: "filter-availability", header: "доступность", labels: [["Широкий коридор", "Ширина коридоров в номере не менее 91 см."], ["Помощник для инвалидов", "На 1 этаже вас встретит специалист  и проводит до номера."]]})
+          .search-room__filter-comfort
+            +dropdown({type: "room", label: "удобства номера"})
+          .search-room__filter-additional-comfort
+            +expandable-checkbox-list({name: "filter-additional-comfort", header: "дополнительные удобства", labels: ["Завтрак", "Письменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь"]})
+            
+        .search-room__result.js-search-room__result
+          .search-room__result-filter.js-search-room__result-filter
+            - for (var x = 0; x < 3; x++)
+              span.search-room__result-filter-line
+          h1.search-room__result-header Номера, которые мы для вас подобрали
+          .search-room__result-wrapper
+            - const data = require('/src/pages/search-room/data/search-room.json')
+            each room in data.rooms
+              .search-room__result-card
+                +room-card({roomNumber: room.roomNumber, roomClass: room.roomClass, price: room.price, reviewsCount: room.reviewsCount, rate: room.rate, photos: room.photos})
+
+          .search-room__result-pagination 
+            +pagination({pages: 15})
+
+    .search-room__bottom-line
+
+  section.search-room__footer
+    +footer({mobile: false})
