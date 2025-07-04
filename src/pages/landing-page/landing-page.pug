@@ -1,0 +1,17 @@
+extends ../template/template.pug
+
+block content
+  include ../../components/header/header.pug
+  include ../../components/selection-card/selection-card.pug
+  include ../../components/footer/footer.pug
+  section.landing-main
+    .landing-main__header 
+      +header({login: false})
+    .landing-main__container
+      .landing-main__wrapper
+        .landing-main__selection-card 
+          +selection-card({header: "Найдём номера под ваши пожелания", dateDropdownId: "find_dates"})
+        .landing-main__text Лучшие номера для вашей работы, отдыха и просто вдохновения
+
+  section.landing-footer
+    +footer({mobile: false})

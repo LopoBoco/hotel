@@ -29,7 +29,7 @@ const optimization = () => {
   return config;
 };
 
-const filename = (ext, folder) => {
+const filename = (ext) => {
   let name;
   if (ext === 'html') {
     name = isDev ? `[name]/index.${ext}` : `[name]/index.[hash].${ext}`;
@@ -83,11 +83,11 @@ module.exports = {
       template: 'src/pages/ui-kit/ui-kit.pug',
       filename: 'ui-kit/index.html',
     }),
-    // new HTMLWebpackPlugin({
-    //   inject: true,
-    //   template: 'src/pages/landing-page/landing-page.pug',
-    //   filename: 'landing-page/index.html',
-    // }),
+    new HTMLWebpackPlugin({
+      inject: true,
+      template: 'src/pages/landing-page/landing-page.pug',
+      filename: 'landing-page/index.html',
+    }),
     new HTMLWebpackPlugin({
       inject: true,
       template: 'src/pages/registration/registration.pug',
