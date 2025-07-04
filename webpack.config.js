@@ -93,11 +93,11 @@ module.exports = {
       template: 'src/pages/registration/registration.pug',
       filename: 'registration/index.html',
     }),
-    // new HTMLWebpackPlugin({
-    //   inject: true,
-    //   template: 'src/pages/login/login.pug',
-    //   filename: 'login/index.html',
-    // }),
+    new HTMLWebpackPlugin({
+      inject: true,
+      template: 'src/pages/login/login.pug',
+      filename: 'login/index.html',
+    }),
     new HTMLWebpackPlugin({
       inject: true,
       template: 'src/pages/search-room/search-room.pug',

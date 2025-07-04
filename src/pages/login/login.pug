@@ -1,0 +1,15 @@
+extends ../template/template.pug
+
+block content
+  include ../../components/header/header.pug
+  include ../../components/login-card/login-card.pug
+  include ../../components/footer/footer.pug
+  section.landing-login-main
+    .landing-login-main__header 
+      +header({login: false})
+    .landing-login-main__container
+      .landing-login-main__login
+        +login-card({header: "Войти"})
+
+  section.landing-login-footer
+    +footer({mobile: false})
